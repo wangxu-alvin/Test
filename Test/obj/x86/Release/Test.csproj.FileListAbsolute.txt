@@ -1,0 +1,17 @@
+C:\Documents and Settings\linpengtao\my documents\visual studio 2010\Projects\C#\Test\Test\bin\Release\Test.exe
+C:\Documents and Settings\linpengtao\my documents\visual studio 2010\Projects\C#\Test\Test\bin\Release\Test.pdb
+C:\Documents and Settings\linpengtao\my documents\visual studio 2010\Projects\C#\Test\Test\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\linpengtao\my documents\visual studio 2010\Projects\C#\Test\Test\obj\x86\Release\Test.exe
+C:\Documents and Settings\linpengtao\my documents\visual studio 2010\Projects\C#\Test\Test\obj\x86\Release\Test.pdb
+D:\BFM\BFM项目\FOCAS说明文档\示例工程\Test\Test\obj\x86\Release\Test.exe
+D:\BFM\BFM项目\FOCAS说明文档\示例工程\Test\Test\obj\x86\Release\Test.pdb
+D:\工作\everything\鹏哥资料\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\Test\obj\x86\Release\Test.exe
+D:\工作\everything\鹏哥资料\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\Test\obj\x86\Release\Test.pdb
+D:\工作\everything\鹏哥资料\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\Test\bin\Release\Test.exe
+D:\工作\everything\鹏哥资料\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\Test\bin\Release\Test.pdb
+D:\工作\everything\鹏哥资料\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\Test\obj\x86\Release\Test.csprojResolveAssemblyReference.cache
+G:\fanuc SDK\Focas 2\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\Test\obj\x86\Release\Test.exe
+G:\fanuc SDK\Focas 2\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\Test\obj\x86\Release\Test.pdb
+G:\fanuc SDK\Focas 2\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\Test\bin\Release\Test.exe
+G:\fanuc SDK\Focas 2\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\Test\bin\Release\Test.pdb
+G:\fanuc SDK\Focas 2\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\Test\obj\x86\Release\Test.csprojResolveAssemblyReference.cache

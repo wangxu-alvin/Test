@@ -1,0 +1,256 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Test
+{
+    class MainEntry
+    {
+        static void a(string[] args)
+        {
+            // 自带样例
+            //Program.demo();
+
+            // 连接机床
+            if (!connectCNC("10.30.3.114", 8193, 10))
+            {
+                return;
+            }
+
+            // 读取机械坐标 失败
+            //if (!mechanicalCoordinate())
+            //{
+            //    return;
+            //}
+
+            // 读取绝对坐标 失败
+            //if (!absoluteCoordinate2())
+            //{
+            //    return;
+            //}
+
+            // 读取绝对坐标
+            if (!stateInfo())
+            {
+                return;
+            }
+
+            // 读取主轴转速
+            if (!acts())
+            {
+                return;
+            }
+
+            // 读取主轴负载
+            if (!load())
+            {
+                return;
+            }
+
+            // 读取程序名
+            if (!programName())
+            {
+                return;
+            }
+
+            // 读取程序计数器
+            if (!blockCount())
+            {
+                return;
+            }
+        }
+
+        static bool connectCNC(string ip, ushort port, int timeout)
+        {
+            // 获取库句柄 ( Ethernet ) 并进行连接
+            ushort Flibhndl = 0;
+            short ret = Focas1.cnc_allclibhndl3(ip, port, timeout, out Flibhndl);
+            if (ret != Focas1.EW_OK)
+            {
+                Console.WriteLine("连接CNC异常！");
+                string message;
+                switch (ret)
+                {
+                    case -8:
+                        message = "Get handle failed.";
+                        break;
+                    case -16:
+                        message = "Communication socket error. The CNC power supply board, Ethernet, Ethernet cable, please check.";
+                        break;
+                    case -15:
+                        message = "DLL type does not exist.";
+                        break;
+                    default:
+                        message = "Unknown return value : " + ret;
+                        break;
+                }
+                Console.WriteLine(message);
+                Console.Read();
+                return false;
+            }
+            Console.WriteLine("程序已经与CNC建立了连接,点击回车继续：");
+            Console.Read();
+            return true;
+        }
+
+        static bool mechanicalCoordinate()
+        {
+            Console.WriteLine("准备读取机械坐标,点击回车继续：");
+            Console.Read();
+
+            ushort Flibhndl = 0;
+            short ret;
+
+            Focas1.ODBAXIS odbaxis = new Focas1.ODBAXIS();
+            String axis = "";
+            for (short i = 0; i < 3; i++)
+            {
+                if (i == 0)
+                {
+                    axis = "X:";
+                }
+                else if (i == 1)
+                {
+                    axis = "Y:";
+                }
+                else
+                {
+                    axis = "Z:";
+                }
+                ret = Focas1.cnc_machine(Flibhndl, (short)(i + 1), 8, odbaxis);
+                if (ret != Focas1.EW_OK)
+                {
+                    Console.WriteLine("读取数据失败，返回值：" + ret);
+                    return false;
+                }
+                Console.WriteLine(axis + odbaxis.data[0]);
+            }
+            return true;
+        }
+
+        static bool absoluteCoordinate2()
+        {
+            Console.WriteLine("准备读取绝对坐标,点击回车继续：");
+            Console.Read();
+
+            ushort Flibhndl = 0;
+
+            // 返回值
+            short ret;
+
+            Focas1.ODBAXIS odbaxis = new Focas1.ODBAXIS();
+
+            ret = Focas1.cnc_absolute2(Flibhndl, -1, 16, odbaxis);
+            if (ret != Focas1.EW_OK)
+            {
+                Console.WriteLine("读取数据失败，返回值：" + ret);
+                return false;
+            }
+            string absoluteX = odbaxis.data[0].ToString();
+            string absoluteY = odbaxis.data[1].ToString();
+            string absoluteZ = odbaxis.data[2].ToString();
+            Console.WriteLine("X:" + absoluteX);
+            Console.WriteLine("Y:" + absoluteY);
+            Console.WriteLine("Z:" + absoluteZ);
+            return true;
+        }
+
+        // Function related to others_cnc_statinfo
+        static bool stateInfo()
+        {
+            Console.WriteLine("准备读取CNC状态信息,点击回车继续：");
+            Console.Read();
+            ushort Flibhndl = 0;
+            short ret;                 // 返回值
+            Focas1.ODBST buf = new Focas1.ODBST();
+            ret = Focas1.cnc_statinfo(Flibhndl, buf);
+            if (ret != Focas1.EW_OK)
+            {
+                Console.WriteLine("读取数据失败，返回值：" + ret);
+                return false;
+            }
+            Console.WriteLine("急停:" + buf.emergency);
+            Console.WriteLine("运行:" + buf.run);
+            Console.WriteLine("告警:" + buf.alarm);
+            return true;
+        }
+
+        // Function related to controlled axis&spindle_cnc_acts
+        static bool acts()
+        {
+            Console.WriteLine("准备读取主轴转速信息,点击回车继续：");
+            Console.Read();
+            ushort Flibhndl = 0;
+            // 返回值
+            short ret;
+            Focas1.ODBACT odbact = new Focas1.ODBACT();
+            ret = Focas1.cnc_acts(Flibhndl, odbact);
+            if (ret != Focas1.EW_OK)
+            {
+                Console.WriteLine("读取数据失败，返回值：" + ret);
+                return false;
+            }
+            Console.WriteLine("主轴转速：" + odbact.data.ToString());
+            return true;
+        }
+
+        // Function related to controlled axis&spindle_cnc_rdspload
+        static bool load()
+        {
+            Console.WriteLine("准备读取主轴负载信息,点击回车继续：");
+            Console.Read();
+            ushort Flibhndl = 0;
+
+            // 返回值
+            short ret;
+            Focas1.ODBSPN odbspn = new Focas1.ODBSPN();
+            ret = Focas1.cnc_rdspload(Flibhndl, Focas1.ALL_SPINDLES, odbspn);
+            if (ret != Focas1.EW_OK)
+            {
+                Console.WriteLine("读取数据失败，返回值：" + ret);
+                return false;
+            }
+            Console.WriteLine(odbspn.data[0]); //TODO 文档没有对返回值的解释
+            return true;
+        }
+
+        // Function related to CNC program_cnc_exeprgname
+        static bool programName()
+        {
+            Console.WriteLine("准备读取正在执行的程序名,点击回车继续：");
+            Console.Read();
+            ushort Flibhndl = 0;
+            short ret;                 // 返回值
+            Focas1.ODBEXEPRG exeprg = new Focas1.ODBEXEPRG();
+            ret = Focas1.cnc_exeprgname(Flibhndl, exeprg);
+            if (ret != Focas1.EW_OK)
+            {
+                Console.WriteLine("读取数据失败，返回值：" + ret);
+                return false;
+            }
+            Console.WriteLine(exeprg.name);
+            Console.WriteLine(exeprg.o_num);
+            return true;
+        }
+
+        // Function related to CNC program_cnc_rdblkcount
+        static bool blockCount()
+        {
+            Console.WriteLine("准备读取正在执行的程序名计数器,点击回车继续：");
+            Console.Read();
+            ushort Flibhndl = 0;
+            short ret;                 // 返回值
+            int prog_bc = 0;
+            ret = Focas1.cnc_rdblkcount(Flibhndl, out prog_bc);
+            if (ret != Focas1.EW_OK)
+            {
+                Console.WriteLine("读取数据失败，返回值：" + ret);
+                return false;
+            }
+            Console.WriteLine(prog_bc);
+            return true;
+        }
+    }
+
+}

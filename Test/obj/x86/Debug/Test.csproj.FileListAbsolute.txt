@@ -1,0 +1,7 @@
+C:\Documents and Settings\linpengtao\my documents\visual studio 2010\Projects\C#\Test\Test\bin\Debug\Test.exe
+C:\Documents and Settings\linpengtao\my documents\visual studio 2010\Projects\C#\Test\Test\bin\Debug\Test.pdb
+C:\Documents and Settings\linpengtao\my documents\visual studio 2010\Projects\C#\Test\Test\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\linpengtao\my documents\visual studio 2010\Projects\C#\Test\Test\obj\x86\Debug\Test.exe
+C:\Documents and Settings\linpengtao\my documents\visual studio 2010\Projects\C#\Test\Test\obj\x86\Debug\Test.pdb
+D:\工作\everything\鹏哥资料\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\Test\obj\x86\Debug\Test.exe
+D:\工作\everything\鹏哥资料\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\Test\obj\x86\Debug\Test.pdb

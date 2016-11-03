@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{C6A55B91-53EC-42C5-949B-408FE0FC86B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanucForm", "FanucForm\FanucForm.csproj", "{5082DAF7-0DFA-4722-B6E6-97F3A4D3F87B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SDK", "SDK\SDK.csproj", "{8634533C-BA8A-428D-9D2A-7266C90FAAF1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6A55B91-53EC-42C5-949B-408FE0FC86B0}.Debug|x86.ActiveCfg = Debug|x86
+		{C6A55B91-53EC-42C5-949B-408FE0FC86B0}.Debug|x86.Build.0 = Debug|x86
+		{C6A55B91-53EC-42C5-949B-408FE0FC86B0}.Release|x86.ActiveCfg = Release|x86
+		{C6A55B91-53EC-42C5-949B-408FE0FC86B0}.Release|x86.Build.0 = Release|x86
+		{5082DAF7-0DFA-4722-B6E6-97F3A4D3F87B}.Debug|x86.ActiveCfg = Debug|x86
+		{5082DAF7-0DFA-4722-B6E6-97F3A4D3F87B}.Debug|x86.Build.0 = Debug|x86
+		{5082DAF7-0DFA-4722-B6E6-97F3A4D3F87B}.Release|x86.ActiveCfg = Release|x86
+		{5082DAF7-0DFA-4722-B6E6-97F3A4D3F87B}.Release|x86.Build.0 = Release|x86
+		{8634533C-BA8A-428D-9D2A-7266C90FAAF1}.Debug|x86.ActiveCfg = Debug|x86
+		{8634533C-BA8A-428D-9D2A-7266C90FAAF1}.Debug|x86.Build.0 = Debug|x86
+		{8634533C-BA8A-428D-9D2A-7266C90FAAF1}.Release|x86.ActiveCfg = Release|x86
+		{8634533C-BA8A-428D-9D2A-7266C90FAAF1}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

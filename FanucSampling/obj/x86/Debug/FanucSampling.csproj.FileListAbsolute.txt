@@ -1,0 +1,1 @@
+G:\fanuc SDK\Focas 2\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\FanucSampling\bin\Debug\FanucSampling.exe.config
