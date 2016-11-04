@@ -31,3 +31,36 @@ G:\fanuc SDK\Focas 2\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\FanucFor
 G:\fanuc SDK\Focas 2\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\FanucForm\obj\x86\Release\FanucForm.DetailForm.resources
 G:\fanuc SDK\Focas 2\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\FanucForm\obj\x86\Release\FanucForm.csprojResolveAssemblyReference.cache
 G:\fanuc SDK\Focas 2\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\FanucForm\bin\Release\Newtonsoft.Json.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\FanucForm.exe.config
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\obj\x86\Release\FanucForm.exe
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\obj\x86\Release\FanucForm.pdb
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\FanucForm.exe
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\FanucForm.pdb
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\apisdk.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\commons-codec.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\commons-httpclient.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\commons-logging.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\IKVM.OpenJDK.Core.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\IKVM.OpenJDK.Util.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\log4net.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\Newtonsoft.Json.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\servlet-api.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\IKVM.Runtime.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\IKVM.OpenJDK.Text.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\IKVM.OpenJDK.Security.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\IKVM.OpenJDK.XML.API.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\IKVM.Runtime.JNI.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\IKVM.OpenJDK.Management.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\IKVM.OpenJDK.Naming.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\IKVM.OpenJDK.SwingAWT.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\IKVM.OpenJDK.Remoting.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\IKVM.OpenJDK.Corba.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\IKVM.OpenJDK.Beans.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\IKVM.OpenJDK.Media.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\IKVM.OpenJDK.Charsets.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\IKVM.OpenJDK.Misc.dll
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\obj\x86\Release\FanucForm.csprojResolveAssemblyReference.cache
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\obj\x86\Release\FanucForm.DetailForm.resources
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\obj\x86\Release\FanucForm.MainForm.resources
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\obj\x86\Release\FanucForm.Properties.Resources.resources
+C:\Users\wangxu\Documents\GitHub\Test\FanucForm\obj\x86\Release\FanucForm.csproj.GenerateResource.Cache

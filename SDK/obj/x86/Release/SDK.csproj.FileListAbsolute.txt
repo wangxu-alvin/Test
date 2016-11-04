@@ -26,3 +26,4 @@ G:\fanuc SDK\Focas 2\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\SDK\bin\
 G:\fanuc SDK\Focas 2\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\SDK\bin\Release\IKVM.OpenJDK.Media.dll
 G:\fanuc SDK\Focas 2\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\SDK\bin\Release\IKVM.OpenJDK.Charsets.dll
 G:\fanuc SDK\Focas 2\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\SDK\bin\Release\IKVM.OpenJDK.Misc.dll
+C:\Users\wangxu\Documents\GitHub\Test\SDK\obj\x86\Release\SDK.csprojResolveAssemblyReference.cache
