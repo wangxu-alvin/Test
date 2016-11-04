@@ -83,14 +83,15 @@ namespace FanucSampling
         {
             // 状态数据 9002
             StateInfo si = cnc.getStateInfo();
-            if (si.accept && si.getReportInfo() != "")
+            string status = si.getReportInfo();
+            if (si.accept && status != "")
             {
                 // 只有状态发生变化才上报
                 Dictionary<string, string> data = new Dictionary<string, string>();
                 data.Add("sbbh", cnc._conf.sbNo); // 设备编号
                 data.Add("type", "9002");
                 StringBuilder content = new StringBuilder();
-                content.Append("{\"sbztdm\":\"").Append(si.getReportInfo()).Append("\"}");
+                content.Append("{\"sbztdm\":\"").Append(status).Append("\"}");
                 data.Add("content", content.ToString()); // 设备状态代码
                 try
                 {
@@ -143,6 +144,9 @@ namespace FanucSampling
         public void reportDisconnect(object sender, EventArgs args)
         {
             CNC cnc = (CNC)sender;
+            cnc.getStateInfo().lastReport = "40";
+            cnc.getStateInfo().accept = false;
+
             // 数据只要有一项没上报过
             Dictionary<string, string> data = new Dictionary<string, string>();
             data.Add("sbbh", cnc._conf.sbNo); // 设备编号
@@ -189,7 +193,7 @@ namespace FanucSampling
         public void report(CNC cnc)
         {
             // 报工信息
-            reportCount(cnc);
+            //reportCount(cnc);
             // 实时数据
             reportRealtime(cnc);
             // 状态信息

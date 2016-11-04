@@ -64,8 +64,8 @@ namespace FanucForm
                 if (cnc.Value._conf.run)
                 {
                     sw.Start();
-                    //sdk.report(cnc.Value);
-                    sdk.reportDummy();
+                    sdk.report(cnc.Value);
+                    //sdk.reportDummy();
                     sw.Stop();
                     log.Debug("[" + cnc.Value._conf.index + "]上报耗时：" + sw.Elapsed);
                 }

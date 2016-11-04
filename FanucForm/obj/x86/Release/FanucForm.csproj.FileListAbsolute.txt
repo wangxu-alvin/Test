@@ -59,7 +59,6 @@ C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\IKVM.OpenJDK.Beans.d
 C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\IKVM.OpenJDK.Media.dll
 C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\IKVM.OpenJDK.Charsets.dll
 C:\Users\wangxu\Documents\GitHub\Test\FanucForm\bin\Release\IKVM.OpenJDK.Misc.dll
-C:\Users\wangxu\Documents\GitHub\Test\FanucForm\obj\x86\Release\FanucForm.csprojResolveAssemblyReference.cache
 C:\Users\wangxu\Documents\GitHub\Test\FanucForm\obj\x86\Release\FanucForm.DetailForm.resources
 C:\Users\wangxu\Documents\GitHub\Test\FanucForm\obj\x86\Release\FanucForm.MainForm.resources
 C:\Users\wangxu\Documents\GitHub\Test\FanucForm\obj\x86\Release\FanucForm.Properties.Resources.resources

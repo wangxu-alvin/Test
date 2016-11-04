@@ -15,3 +15,7 @@ G:\fanuc SDK\Focas 2\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\Test\obj
 G:\fanuc SDK\Focas 2\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\Test\bin\Release\Test.exe
 G:\fanuc SDK\Focas 2\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\Test\bin\Release\Test.pdb
 G:\fanuc SDK\Focas 2\TSUB-E034_v1.0 FOCAS说明文档\示例工程\Test\Test\obj\x86\Release\Test.csprojResolveAssemblyReference.cache
+C:\Users\wangxu\Documents\GitHub\Test\Test\bin\Release\Test.exe
+C:\Users\wangxu\Documents\GitHub\Test\Test\bin\Release\Test.pdb
+C:\Users\wangxu\Documents\GitHub\Test\Test\obj\x86\Release\Test.exe
+C:\Users\wangxu\Documents\GitHub\Test\Test\obj\x86\Release\Test.pdb

@@ -45,6 +45,10 @@ namespace FanucSampling
 
             public override string getReportInfo()
             {
+                if (!accept)
+                {
+                    return "";
+                }
                 // 40停机状态通过事件机制上报， WisSDK.reportDisconnect
                 string result = "";
                 if (alarm == 1)
@@ -57,6 +61,7 @@ namespace FanucSampling
                 }
                 if (result != lastReport)
                 {
+                    lastReport = result;
                     return result;
                 }
                 else
