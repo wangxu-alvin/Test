@@ -32,10 +32,9 @@ namespace FanucSampling
             {
                 json = sdk.call(api, map, Conf.sdk.protocol);
             }
-            catch (SDKException e)
+            catch (java.lang.Exception e)
             {
                 log.Error(api + ":" + e.getMessage());
-                throw e;
             }
             return json;
         }
@@ -147,10 +146,10 @@ namespace FanucSampling
             // 数据只要有一项没上报过
             Dictionary<string, string> data = new Dictionary<string, string>();
             data.Add("sbbh", cnc._conf.sbNo); // 设备编号
-            data.Add("type", "9002");
-            StringBuilder content = new StringBuilder();
-            content.Append("{\"sbztdm\":\"").Append("40").Append("\"}");
-            data.Add("content", content.ToString()); // 设备状态代码
+            data.Add("type", "9003");
+            //StringBuilder content = new StringBuilder();
+            //content.Append("{\"sbztdm\":\"").Append("40").Append("\"}");
+            //data.Add("content", content.ToString()); // 设备状态代码
             try
             {
                 this.call(Conf.sdk.api_url, data);
@@ -165,7 +164,7 @@ namespace FanucSampling
         {
             // 数据只要有一项没上报过
             Dictionary<string, string> data = new Dictionary<string, string>();
-            data.Add("sbbh", "sb01"); // 设备编号
+            data.Add("sbbh", "A131420097"); // 设备编号
             data.Add("type", "9001");
             StringBuilder content = new StringBuilder();
             content.Append("{\"zzzsz_s\":\"").Append("123").Append("\"");
