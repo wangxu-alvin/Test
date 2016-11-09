@@ -20,7 +20,7 @@ namespace FanucSampling
             sdk = new ApiSDK(Conf.sdk.server, Conf.sdk.appid, Conf.sdk.appkey);
         }
         
-        private string call(string api, Dictionary<string, string> data)
+        public string call(string api, Dictionary<string, string> data)
         {
             HashMap map = new HashMap();
             foreach (var item in data)
@@ -73,7 +73,7 @@ namespace FanucSampling
                     }
                     catch (SDKException e)
                     {
-                        // do nothing
+                        log.Error(e.getMessage());
                     }
                 }
             }
@@ -99,7 +99,7 @@ namespace FanucSampling
                 }
                 catch (SDKException e)
                 {
-                    // do nothing
+                    log.Error(e.getMessage());
                 }
             }
         }
@@ -135,7 +135,7 @@ namespace FanucSampling
                     }
                     catch (SDKException e)
                     {
-                        // do nothing
+                        log.Error(e.getMessage());
                     }
                 }
             }
@@ -160,7 +160,7 @@ namespace FanucSampling
             }
             catch (SDKException e)
             {
-                // do nothing
+                log.Error(e.getMessage());
             }
         }
 
@@ -186,7 +186,7 @@ namespace FanucSampling
             }
             catch (SDKException e)
             {
-                // do nothing
+                log.Error(e.getMessage());
             }
         }
 

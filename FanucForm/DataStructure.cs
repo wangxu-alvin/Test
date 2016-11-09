@@ -73,7 +73,7 @@ namespace FanucSampling
 
         public class Acts : DataStructure
         {
-            public string value;
+            public string value = "0";
 
             public override string getReportInfo()
             {
@@ -83,7 +83,7 @@ namespace FanucSampling
 
         public class Load : DataStructure
         {
-            public string value;
+            public string value = "0";
 
             public override string getReportInfo()
             {

@@ -267,7 +267,7 @@ using System.Runtime.InteropServices;
         {
             public short datano; /* dummy */
             public short type;   /* axis number */
-            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 4)]
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 8)]
             public short[] data;   /* preset data */
         }
 

@@ -63,7 +63,7 @@ namespace FanucForm
             {
                 if (cnc.Value._conf.run)
                 {
-                    sw.Start();
+                    sw.Reset();
                     sdk.report(cnc.Value);
                     //sdk.reportDummy();
                     sw.Stop();
@@ -114,6 +114,7 @@ namespace FanucForm
                 this.dataGridView1.Rows[index].Cells["RUNNABLE"].Value = conf.run ? "是":"否";
                 CNC cnc = new CNC(conf);
                 cnc.disconnectionHandler += sdk.reportDisconnect;
+                //cnc.realtimeHandler += new RealtimeReportor(cnc._conf.sbNo).listen;
                 list.Add(conf.index, cnc);
             }
         }
@@ -179,13 +180,15 @@ namespace FanucForm
                 isSampling = false;
             }
         }
-
+        static bool sampleAccessing = false;
         public static void sample()
         {
             log.Debug("开始采样");
             Stopwatch sw = new Stopwatch();
-            while (true)
+            while (!sampleAccessing)
             {
+                sampleAccessing = true;
+                
                 if (!isSampling)
                 {
                     log.Debug("停止采样");
@@ -200,8 +203,8 @@ namespace FanucForm
                     }
                     if (cnc.Value._conf.run)
                     {
-                        sw.Start();
-                        cnc.Value.sample();
+                        sw.Reset();
+                        sampleAccessing = !cnc.Value.sample();
                         sw.Stop();
                         log.Debug("[" + cnc.Value._conf.index + "]采样耗时：" + sw.Elapsed);
                     }
