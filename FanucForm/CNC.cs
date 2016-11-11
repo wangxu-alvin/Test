@@ -366,7 +366,7 @@ namespace FanucSampling
             }
         }
 
-        public bool sample()
+        public void sample()
         {
             this.connectCNC();
             this.rdActs();
@@ -376,7 +376,6 @@ namespace FanucSampling
             this.rdCount();
             this.rdStateInfo();
            // this.release();
-            return true;
         }
 
         public string getLastMethod()

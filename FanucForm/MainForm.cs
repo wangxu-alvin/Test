@@ -180,15 +180,12 @@ namespace FanucForm
                 isSampling = false;
             }
         }
-        static bool sampleAccessing = false;
         public static void sample()
         {
             log.Debug("开始采样");
             Stopwatch sw = new Stopwatch();
-            while (!sampleAccessing)
+            while (true)
             {
-                sampleAccessing = true;
-                
                 if (!isSampling)
                 {
                     log.Debug("停止采样");
@@ -204,7 +201,7 @@ namespace FanucForm
                     if (cnc.Value._conf.run)
                     {
                         sw.Reset();
-                        sampleAccessing = !cnc.Value.sample();
+                        cnc.Value.sample();
                         sw.Stop();
                         log.Debug("[" + cnc.Value._conf.index + "]采样耗时：" + sw.Elapsed);
                     }

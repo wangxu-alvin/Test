@@ -124,14 +124,15 @@ namespace FanucSampling
                         StringBuilder content = new StringBuilder();
                         content.Append("{\"cxmc\":\"").Append(prog.name).Append("\"");
                         content.Append(",\"cxbz\":\"").Append(prog.comment).Append("\"");
-                        content.Append(",\"ljjggs\":\"").Append(count.getReportInfo()).Append("\""); // 零件加工个数
+                        content.Append(",\"bgsl\":\"").Append(count.getReportInfo()).Append("\""); // 零件加工个数
                         content.Append(",\"sjsj\":\"").Append(count.time).Append("\"");
                         content.Append("}");
                         data.Add("content", content.ToString());
                         this.call(Conf.sdk.api_url, data);
                         prog.reported = true;
                         count.reported = true;
-                        cnc.setLastCount(count);
+                        cnc.getLastCount().value = count.value;
+                        cnc.getLastCount().time = count.time;
                     }
                     catch (SDKException e)
                     {
@@ -193,7 +194,7 @@ namespace FanucSampling
         public void report(CNC cnc)
         {
             // 报工信息
-            //reportCount(cnc);
+            reportCount(cnc);
             // 实时数据
             reportRealtime(cnc);
             // 状态信息

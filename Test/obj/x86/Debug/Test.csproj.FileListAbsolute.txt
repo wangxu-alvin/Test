@@ -9,3 +9,4 @@ C:\Users\wangxu\Documents\GitHub\Test\Test\bin\Debug\Test.exe
 C:\Users\wangxu\Documents\GitHub\Test\Test\bin\Debug\Test.pdb
 C:\Users\wangxu\Documents\GitHub\Test\Test\obj\x86\Debug\Test.exe
 C:\Users\wangxu\Documents\GitHub\Test\Test\obj\x86\Debug\Test.pdb
+C:\Users\wangxu\Documents\GitHub\Test\Test\obj\x86\Debug\Test.csprojResolveAssemblyReference.cache
