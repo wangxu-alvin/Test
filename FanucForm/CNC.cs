@@ -270,28 +270,28 @@ namespace FanucSampling
                     _prog.name = String.Format("O{0:0000}", int.Parse(name));
                     result = true;
                 }
-                Focas1.ODBSEQ snum = new Focas1.ODBSEQ();
+                Focas1.ODBPRO pnum = new Focas1.ODBPRO();
                 sw.Reset();
-                log.Info("start---rdseqnum");
-                ret = Focas1.cnc_rdseqnum(Flibhndl, snum);
-                log.Info("end---rdseqnum");
+                log.Info("start---rdprgnum");
+                ret = Focas1.cnc_rdprgnum(Flibhndl, pnum);
+                log.Info("end---rdprgnum");
                 sw.Stop();
-                log.Debug("[" + _conf.index + "]读取程序序号耗时：" + sw.Elapsed);
+                log.Debug("[" + _conf.index + "]读取程序号耗时：" + sw.Elapsed);
                 checkConnection(ret);
-                recordOperation("读取程序序号", ret);
+                recordOperation("读取程序号", ret);
                 if (ret == Focas1.EW_OK)
                 {
-                    if (snum == null)
+                    if (pnum.data == null)
                     {
-                        log.Error("读取程序序号结果为null");
+                        log.Error("读取程序号结果为null");
                         return;
                     }
-                    _prog.seq = String.Format("N{0:00000}", snum.data);
+                    _prog.seq = String.Format("O{0:0000}", pnum.data);
                     result |= result;
 
                     short type = 2;
                     short readNum = 1;
-                    short seq = short.Parse(snum.data.ToString());
+                    short seq = short.Parse(pnum.data.ToString());
                     Focas1.PRGDIR2 buf = new Focas1.PRGDIR2();
                     sw.Reset();
                     log.Info("start---rdprogdir2");
