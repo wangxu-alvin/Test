@@ -19,4 +19,3 @@ C:\Users\wangxu\Documents\GitHub\Test\Test\bin\Release\Test.exe
 C:\Users\wangxu\Documents\GitHub\Test\Test\bin\Release\Test.pdb
 C:\Users\wangxu\Documents\GitHub\Test\Test\obj\x86\Release\Test.exe
 C:\Users\wangxu\Documents\GitHub\Test\Test\obj\x86\Release\Test.pdb
-C:\Users\wangxu\Documents\GitHub\Test\Test\obj\x86\Release\Test.csprojResolveAssemblyReference.cache
