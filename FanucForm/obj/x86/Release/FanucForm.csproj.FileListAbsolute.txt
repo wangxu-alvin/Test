@@ -63,4 +63,3 @@ C:\Users\wangxu\Documents\GitHub\Test\FanucForm\obj\x86\Release\FanucForm.Detail
 C:\Users\wangxu\Documents\GitHub\Test\FanucForm\obj\x86\Release\FanucForm.MainForm.resources
 C:\Users\wangxu\Documents\GitHub\Test\FanucForm\obj\x86\Release\FanucForm.Properties.Resources.resources
 C:\Users\wangxu\Documents\GitHub\Test\FanucForm\obj\x86\Release\FanucForm.csproj.GenerateResource.Cache
-C:\Users\wangxu\Documents\GitHub\Test\FanucForm\obj\x86\Release\FanucForm.csprojResolveAssemblyReference.cache

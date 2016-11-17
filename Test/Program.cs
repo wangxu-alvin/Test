@@ -14,55 +14,28 @@ namespace Test
             short ret;                 // 返回值
 
             // 获取库句柄 ( Ethernet )
-            //ret = Focas1.cnc_allclibhndl3("10.30.3.114", 8193, 10, out Flibhndl);
-            //if (ret != Focas1.EW_OK)
-            //{
-            //    Console.WriteLine("发生异常，请检查！");
-            //    return;
-            //}
-
-            //#region cnc_rdprogdir2
-            //Console.WriteLine("要读的第一个程序的程序号是：");
-            //string _top_prog = Console.ReadLine();
-            //Console.WriteLine("一共要读几个程序：");
-            //string _num_prog = Console.ReadLine();
-            //short type = 2;
-            //short top_prog = short.Parse(_top_prog);
-            //short num_prog = short.Parse(_num_prog);
-
-            //Focas1.PRGDIR2 buf = new Focas1.PRGDIR2();
-            //ret = Focas1.cnc_rdprogdir2(Flibhndl, type, ref top_prog, ref num_prog, buf);
-            //Console.WriteLine("程序comment：");
-            //Console.WriteLine(buf.dir1.comment);
-            //Console.Read();
-            //#endregion
-
-
-
-            // 获取库句柄 ( Ethernet )
-            ret = Focas1.cnc_allclibhndl3("10.30.3.114", 8193, 10, out Flibhndl);
+            ret = Focas1.cnc_allclibhndl3("192.168.1.193", 8193, 10, out Flibhndl);
             if (ret != Focas1.EW_OK)
             {
                 Console.WriteLine("发生异常，请检查！");
                 return;
             }
-            #region cnc_rdparam
 
-            Focas1.IODBPSD_1 obd = new Focas1.IODBPSD_1();
-            ret = Focas1.cnc_rdparam(Flibhndl, 6711, 0, 8, obd);
-            if (ret == Focas1.EW_OK)
-            {
-                Console.WriteLine(obd.cdata);
-                Console.WriteLine(obd.datano);
-                Console.WriteLine(obd.idata);
-                Console.WriteLine(obd.ldata); // 加工零件应该应该是这个数
-                Console.WriteLine(obd.type);
-                return;
-            }
+            #region cnc_rdexecprog
+
+            ushort length = 1000;
+            short blknum = 0;
+            object data = 0;
+
+            ret = Focas1.cnc_rdexecprog(Flibhndl, ref length, out blknum, data);
+
             Console.Read();
+
+            #endregion
+
         }
-        #endregion
     }
+}
 
 
 
@@ -118,4 +91,4 @@ namespace Test
     //        Console.Read();
     //    }
     //}
-}
+

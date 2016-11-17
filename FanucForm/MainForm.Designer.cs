@@ -30,11 +30,6 @@
         {
             this.btnSampling = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnReport = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnRefreshView = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.timeLabel = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SBNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +39,11 @@
             this.lastMethod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastResult = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnReport = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnRefreshView = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,53 +80,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(831, 471);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
-            // 
-            // btnReport
-            // 
-            this.btnReport.Location = new System.Drawing.Point(109, 30);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(75, 22);
-            this.btnReport.TabIndex = 3;
-            this.btnReport.Text = "开始上报";
-            this.btnReport.UseVisualStyleBackColor = true;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(707, 31);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(96, 22);
-            this.btnRefresh.TabIndex = 0;
-            this.btnRefresh.Text = "刷新配置文件";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // btnRefreshView
-            // 
-            this.btnRefreshView.Location = new System.Drawing.Point(190, 30);
-            this.btnRefreshView.Name = "btnRefreshView";
-            this.btnRefreshView.Size = new System.Drawing.Size(113, 23);
-            this.btnRefreshView.TabIndex = 4;
-            this.btnRefreshView.Text = "自动刷新视图";
-            this.btnRefreshView.UseVisualStyleBackColor = true;
-            this.btnRefreshView.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(309, 35);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 12);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "视图数据时间：";
-            // 
-            // timeLabel
-            // 
-            this.timeLabel.AutoSize = true;
-            this.timeLabel.Location = new System.Drawing.Point(395, 35);
-            this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(0, 12);
-            this.timeLabel.TabIndex = 6;
             // 
             // ID
             // 
@@ -191,6 +144,54 @@
             this.lastTime.Name = "lastTime";
             this.lastTime.ReadOnly = true;
             this.lastTime.Width = 160;
+            // 
+            // btnReport
+            // 
+            this.btnReport.Location = new System.Drawing.Point(109, 30);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(75, 22);
+            this.btnReport.TabIndex = 3;
+            this.btnReport.Text = "开始上报";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Location = new System.Drawing.Point(707, 31);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(96, 22);
+            this.btnRefresh.TabIndex = 0;
+            this.btnRefresh.Text = "刷新配置文件";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Visible = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnRefreshView
+            // 
+            this.btnRefreshView.Location = new System.Drawing.Point(190, 30);
+            this.btnRefreshView.Name = "btnRefreshView";
+            this.btnRefreshView.Size = new System.Drawing.Size(113, 23);
+            this.btnRefreshView.TabIndex = 4;
+            this.btnRefreshView.Text = "自动刷新视图";
+            this.btnRefreshView.UseVisualStyleBackColor = true;
+            this.btnRefreshView.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(309, 35);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 12);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "视图数据时间：";
+            // 
+            // timeLabel
+            // 
+            this.timeLabel.AutoSize = true;
+            this.timeLabel.Location = new System.Drawing.Point(395, 35);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(0, 12);
+            this.timeLabel.TabIndex = 6;
             // 
             // MainForm
             // 
