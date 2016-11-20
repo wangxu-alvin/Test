@@ -38,7 +38,8 @@ namespace FanucSampling
                 // load cnc config
                 int total = int.Parse(getProperty("total"));
                 CNCConf.timeout = int.Parse(getProperty("timeout"));
-                
+                CNCConf.abnormal_timeout = int.Parse(getProperty("abnormal_timeout"));
+
                 cncs = new CNCConf[total];
                 for (int i = 0; i < total; i++)
                 {
@@ -72,6 +73,7 @@ namespace FanucSampling
             public int index;
             public string sbNo;
             public static int timeout;
+            public static int abnormal_timeout;
             public bool run;
             public string ip;
             public ushort port;

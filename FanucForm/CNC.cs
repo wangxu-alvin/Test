@@ -92,8 +92,9 @@ namespace FanucSampling
                 // 获取库句柄 ( Ethernet ) 并进行连接
                 short ret;
                 sw.Reset();
+                int timeout = _conf.run ? CNCConf.timeout : CNCConf.abnormal_timeout;
                 log.Info("start---allclibhndl3");
-                ret = Focas1.cnc_allclibhndl3(_conf.ip, _conf.port, CNCConf.timeout, out Flibhndl);
+                ret = Focas1.cnc_allclibhndl3(_conf.ip, _conf.port, timeout, out Flibhndl);
                 log.Info("end---allclibhndl3");
                 sw.Stop();
                 log.Info("[" + _conf.index + "]连接机床耗时：" + sw.Elapsed);
@@ -102,6 +103,7 @@ namespace FanucSampling
                 if (ret == Focas1.EW_OK)
                 {
                     _connection = Connection.CONNECTED;
+                    _conf.run = true;
                     log.Debug("连接【" + _conf.index + "】机床成功");
                 }
             }
@@ -422,6 +424,7 @@ namespace FanucSampling
                     }
                 }
                 _connection = Connection.NOT_CONNECTED;
+                _conf.run = false;
             }
         }
     }

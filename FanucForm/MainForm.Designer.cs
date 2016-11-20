@@ -30,6 +30,11 @@
         {
             this.btnSampling = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnReport = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnRefreshView = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.timeLabel = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SBNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -39,11 +44,6 @@
             this.lastMethod = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastResult = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnReport = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.btnRefreshView = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.timeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,70 +80,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(831, 471);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
-            // 
-            // ID
-            // 
-            this.ID.FillWeight = 50F;
-            this.ID.Frozen = true;
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ID.Visible = false;
-            this.ID.Width = 50;
-            // 
-            // SBNO
-            // 
-            this.SBNO.HeaderText = "设备编号";
-            this.SBNO.Name = "SBNO";
-            this.SBNO.ReadOnly = true;
-            // 
-            // IP
-            // 
-            this.IP.HeaderText = "IP";
-            this.IP.Name = "IP";
-            this.IP.ReadOnly = true;
-            this.IP.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // PORT
-            // 
-            this.PORT.HeaderText = "端口";
-            this.PORT.Name = "PORT";
-            this.PORT.ReadOnly = true;
-            this.PORT.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // RUNNABLE
-            // 
-            this.RUNNABLE.HeaderText = "是否启用";
-            this.RUNNABLE.Name = "RUNNABLE";
-            this.RUNNABLE.ReadOnly = true;
-            this.RUNNABLE.Width = 80;
-            // 
-            // CONNECTION
-            // 
-            this.CONNECTION.HeaderText = "连接状态";
-            this.CONNECTION.Name = "CONNECTION";
-            this.CONNECTION.ReadOnly = true;
-            this.CONNECTION.Width = 80;
-            // 
-            // lastMethod
-            // 
-            this.lastMethod.HeaderText = "最近请求方法";
-            this.lastMethod.Name = "lastMethod";
-            this.lastMethod.ReadOnly = true;
-            // 
-            // lastResult
-            // 
-            this.lastResult.HeaderText = "最近请求结果";
-            this.lastResult.Name = "lastResult";
-            this.lastResult.ReadOnly = true;
-            // 
-            // lastTime
-            // 
-            this.lastTime.HeaderText = "最近操作时间";
-            this.lastTime.Name = "lastTime";
-            this.lastTime.ReadOnly = true;
-            this.lastTime.Width = 160;
             // 
             // btnReport
             // 
@@ -192,6 +128,72 @@
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(0, 12);
             this.timeLabel.TabIndex = 6;
+            // 
+            // ID
+            // 
+            this.ID.FillWeight = 50F;
+            this.ID.Frozen = true;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ID.Visible = false;
+            this.ID.Width = 50;
+            // 
+            // SBNO
+            // 
+            this.SBNO.HeaderText = "设备编号";
+            this.SBNO.Name = "SBNO";
+            this.SBNO.ReadOnly = true;
+            this.SBNO.Width = 150;
+            // 
+            // IP
+            // 
+            this.IP.HeaderText = "IP";
+            this.IP.Name = "IP";
+            this.IP.ReadOnly = true;
+            this.IP.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // PORT
+            // 
+            this.PORT.HeaderText = "端口";
+            this.PORT.Name = "PORT";
+            this.PORT.ReadOnly = true;
+            this.PORT.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.PORT.Width = 70;
+            // 
+            // RUNNABLE
+            // 
+            this.RUNNABLE.HeaderText = "设备网络";
+            this.RUNNABLE.Name = "RUNNABLE";
+            this.RUNNABLE.ReadOnly = true;
+            this.RUNNABLE.Width = 80;
+            // 
+            // CONNECTION
+            // 
+            this.CONNECTION.HeaderText = "连接状态";
+            this.CONNECTION.Name = "CONNECTION";
+            this.CONNECTION.ReadOnly = true;
+            this.CONNECTION.Width = 80;
+            // 
+            // lastMethod
+            // 
+            this.lastMethod.HeaderText = "最近请求方法";
+            this.lastMethod.Name = "lastMethod";
+            this.lastMethod.ReadOnly = true;
+            // 
+            // lastResult
+            // 
+            this.lastResult.HeaderText = "最近请求结果";
+            this.lastResult.Name = "lastResult";
+            this.lastResult.ReadOnly = true;
+            // 
+            // lastTime
+            // 
+            this.lastTime.HeaderText = "最近操作时间";
+            this.lastTime.Name = "lastTime";
+            this.lastTime.ReadOnly = true;
+            this.lastTime.Width = 160;
             // 
             // MainForm
             // 

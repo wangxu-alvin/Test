@@ -193,12 +193,12 @@ namespace FanucSampling
 
         public void report(CNC cnc)
         {
+            // 状态信息
+            reportState(cnc);
             // 报工信息
             reportCount(cnc);
             // 实时数据
             reportRealtime(cnc);
-            // 状态信息
-            reportState(cnc);
         }
         #endregion
     }

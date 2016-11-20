@@ -82,6 +82,7 @@ namespace FanucForm
                 dataGridView1.Rows[i].Cells["lastMethod"].Value = cnc.getLastMethod();
                 dataGridView1.Rows[i].Cells["lastResult"].Value = cnc.getLastResult();
                 dataGridView1.Rows[i].Cells["lastTime"].Value = cnc.getLastTime();
+                dataGridView1.Rows[i].Cells["RUNNABLE"].Value = cnc._conf.run ? "正常":"异常";
                 string connection;
                 if (cnc.getConnection() == FanucSampling.DataStructure.Connection.CONNECTED)
                 {
@@ -111,10 +112,9 @@ namespace FanucForm
                 this.dataGridView1.Rows[index].Cells["SBNO"].Value = conf.sbNo;
                 this.dataGridView1.Rows[index].Cells["IP"].Value = conf.ip;
                 this.dataGridView1.Rows[index].Cells["PORT"].Value = conf.port;
-                this.dataGridView1.Rows[index].Cells["RUNNABLE"].Value = conf.run ? "是":"否";
+                this.dataGridView1.Rows[index].Cells["RUNNABLE"].Value = conf.run ? "正常":"异常";
                 CNC cnc = new CNC(conf);
                 cnc.disconnectionHandler += sdk.reportDisconnect;
-                //cnc.realtimeHandler += new RealtimeReportor(cnc._conf.sbNo).listen;
                 list.Add(conf.index, cnc);
             }
         }
@@ -171,8 +171,10 @@ namespace FanucForm
             {
                 this.btnSampling.Text = "停止采样";
                 isSampling = true;
-                Thread thread = new Thread(new ThreadStart(MainForm.sample));
-                thread.Start();
+                Thread sampleThread = new Thread(new ThreadStart(MainForm.sample));
+                sampleThread.Start();
+                Thread stateThread = new Thread(new ThreadStart(MainForm.checkState));
+                stateThread.Start();
             }
             else
             {
@@ -212,6 +214,39 @@ namespace FanucForm
                     }
                 }
                 Thread.Sleep(Conf.freq.sampling);
+            }
+        }
+
+        public static void checkState()
+        {
+            Stopwatch sw = new Stopwatch();
+            while (true)
+            {
+                if (!isSampling)
+                {
+                    log.Debug("停止采样");
+                    return;
+                }
+                foreach (var cnc in list)
+                {
+                    if (!isSampling)
+                    {
+                        log.Debug("停止采样");
+                        return;
+                    }
+                    if (!cnc.Value._conf.run)
+                    {
+                        sw.Reset();
+                        cnc.Value.connectCNC();
+                        sw.Stop();
+                        log.Debug("[" + cnc.Value._conf.index + "]采样耗时：" + sw.Elapsed);
+                    }
+                    if (!isSampling)
+                    {
+                        log.Debug("停止采样");
+                        return;
+                    }
+                }
             }
         }
 
