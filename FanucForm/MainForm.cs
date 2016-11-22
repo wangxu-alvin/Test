@@ -237,7 +237,11 @@ namespace FanucForm
                     if (!cnc.Value._conf.run)
                     {
                         sw.Reset();
-                        cnc.Value.connectCNC();
+                        if (cnc.Value.connectCNC())
+                        {
+                            // 如果连接成功了，会将_conf.run改为true，release时不会将_conf.run改为false
+                            cnc.Value.release();
+                        }
                         sw.Stop();
                         log.Debug("[" + cnc.Value._conf.index + "]采样耗时：" + sw.Elapsed);
                     }

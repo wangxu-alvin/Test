@@ -83,7 +83,7 @@ namespace FanucSampling
             _lastCount = count;
         }
 
-        public void connectCNC()
+        public bool connectCNC()
         {
             if (_connection == Connection.NOT_CONNECTED)
             {
@@ -105,8 +105,14 @@ namespace FanucSampling
                     _connection = Connection.CONNECTED;
                     _conf.run = true;
                     log.Debug("连接【" + _conf.index + "】机床成功");
+                    return true;
+                }
+                else
+                {
+                    return false;
                 }
             }
+            return true;
         }
 
         public void rdMechanicalCoordinate()
